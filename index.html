@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sinan Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/b528f7cb07.js" crossorigin="anonymous"></script>
+</head>
+<body> 
+  <div id="header">
+    <div class="container">
+      <div class="topmenu">
+        <nav>
+          <img src="logo.png" alt="Logo" class="logo">
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+          <a href="CVNew.pdf" download class="rbtn">Resume<i class="fa-solid fa-arrow-down fa-bounce"></i></a>
+        </nav>
+      </div>
+      <div class="header-text">
+        <h2>MUHAMMED</h2>
+        <h1>SINAN</h1>
+        <p>ENGINEERING STUDENT</p>
+      </div>
+    </div>
+  </div>
+  <!-- ----------about----------- -->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col1">
+          <img src="pic1.jpg" alt="">
+        </div>
+        <div class="about-col2">
+          <h1 class="sub-title">About me</h1>
+          <p>Lorem ipsum is a placeholder text commonly 
+            used in the design and typesetting industry. 
+            It consists of Latin-like words and
+            gibberish sentences that have no specific
+            meaning. Designers and developers use it to 
+            fill in content areas of a design or layout 
+            when the actual content is not available or 
+            finalized.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- --------------services------------- -->
+  <div id="services">
+    <div class="container">
+      <h1 class="sub-title">Services</h1>
+      <div class="services-list">
+        <div>
+          <h2>Graphic Designing</h2>
+          <p>Lorem ipsum is a placeholder text commonly 
+            used in the design and typesetting industry.</p>
+          <a href="#">More</a>
+        </div>
+        <div>
+          <h2>Web Designing</h2>
+          <p>Lorem ipsum is a placeholder text commonly 
+            used in the dustry.</p>
+            <a href="#">More</a>
+        </div>
+        <div>
+          <h2>Ui/ux Designing</h2>
+          <p>Lorem ipsum is a placeholder text commonly 
+            used in the design and typesetting industry.</p>
+            <a href="#">More</a>
+        </div>
+        <div>
+          <h2>Video Editing</h2>
+          <p>Lorem ipsum is a placeholder text commonly 
+            used in the design and typesetting industry.</p>
+            <a href="#">More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ---------------------portfolio--------------- -->
+  <div id="portfolio">
+    <div class="container">
+      <h1 class="sub-title">Portfolio</h1>
+      <div class="work-list">
+        <div class="work">
+          <img src="design1.jpg" alt="work">
+          <div class="work-layer">
+            <h3>Design</h3>
+            <p>Lorem ipsum is a placeholder text commonly</p>
+            <a href="#">0</a>
+          </div>
+        </div>
+        <div class="work">
+          <img src="art1.jpg" alt="work">
+          <div class="work-layer">
+            <h3>Art</h3>
+            <p>Lorem ipsum is a placeholder text commonly</p>
+            <a href="#">0</a>
+          </div>
+        </div>
+        <div class="work">
+          <img src="ui1.jpg" alt="work">
+          <div class="work-layer">
+            <h3>Ui/Ux</h3>
+            <p>Lorem ipsum is a placeholder text commonly</p>
+            <a href="#">0</a>
+          </div>
+        </div>
+      </div>
+      <a class="btn" href="">See All</a>
+    </div>
+  </div>
+  <!-- ----------------contact-------------- -->
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title">Contact me</h1>
+          <p><a href="mailto: sinanlw95@gmail.com">sinanlw95@gmail.com</a></p>
+          <p><a href="#">70259 38934</a></p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/sinan.muhammed.75491856/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/95.ixv/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://twitter.com/IE_sinan"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/sinan-muhammed-415724251"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/95-ixv"><i class="fa-brands fa-github"></i></a>
+            <a href="https://wa.me/7025938934?text=Hi%20I'm%20contacting%20from%20your%20Website"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="contact-right">
+          <form action="" name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="email" name="Email" placeholder="Your email" required>
+            <textarea name="Message" id="" cols="30" rows="10" placeholder="Your message"></textarea>
+            <button type="Submit" class="btn btn2">Send</button>
+          </form>
+          <span id="msg"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>© Sinan Muhammed</p>
+  </div>
+
+  <script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu() {
+      sidemenu.style.right = "0";      
+    }
+    function closemenu() {
+      sidemenu.style.right = "-200px";      
+    }
+
+
+
+  </script>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw9NJlwZJ9E6fDJPTuOepn3ChSU3POxGZpEY0CIOiqkn66hFAG9NRGSwf81lSplqc4cTg/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+          msg.innerHTML = "Thanks for connecting with me."
+          setTimeout(function(){
+            msg.innerHTML = ""
+          },5000)
+          form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
