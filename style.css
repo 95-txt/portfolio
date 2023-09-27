@@ -83,7 +83,9 @@ nav ul li a:hover{
 .rbtn:hover i{
   color: #000;
 }
-
+.phone{
+  display: none;
+}
 
 .header-text h2{
   margin-top: 15%;
@@ -407,6 +409,11 @@ nav .fa-xmark,nav .fa-bars{
   .rbtn{
     display: none;
   }
+  .phone{
+    display: block;
+    font-size: 30px;
+    margin: 25px;
+  } 
   nav{
     margin-top: 4%;
   }
