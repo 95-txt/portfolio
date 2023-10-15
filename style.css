@@ -21,7 +21,7 @@ body{
 #header{
   width: 100%;
   height: 100vh;
-  background-image: url(bg1.jpg);
+  background-image: url(bg2.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -31,6 +31,17 @@ body{
 /* .topmenu{
   width: 100%;
 } */
+.blur{
+  width: 100%;
+  height: 77px;
+  top: 0;
+  position: absolute;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(18px);
+  position: fixed;
+  border-bottom: solid 2px #ffffff40;
+  z-index: 5;
+}
 nav{
   display: flex;
   justify-content: space-between;
@@ -83,10 +94,9 @@ nav ul li a:hover{
 .rbtn:hover i{
   color: #000;
 }
-
 .phone{
   display: none;
-}
+} 
 
 .header-text h2{
   margin-top: 15%;
@@ -110,6 +120,7 @@ nav ul li a:hover{
   background-color: #D3D3D3;
   padding: 80px 0;
   color: #161A1D;
+  padding-top: 140px;
 }
 .row{
   display: flex;
@@ -148,15 +159,15 @@ nav ul li a:hover{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
   grid-gap: 3em;
-  margin-top: 50px;
+  margin-top: 80px;
 }
 .services-list div{
-  background-color: #D3D3D3;
+  background-color: #D3D3D350;
   box-shadow: 0px 5px 15px #161A1D00;
   border-radius: 15px;
   padding: 30px;
   font-size: 30px;
-  transition: .5s;
+  transition: .7s;
 }
 .services-list div p{
   font-size: 25px;
@@ -173,11 +184,102 @@ nav ul li a:hover{
   box-shadow: 0px 5px 15px #161A1D35;
   transform: translateY(-5px)scale(1.01);
 }
+/* --------------brands------------ */
+
+
+@keyframes slide {
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-100%);
+  }
+}
+.logos:hover .logos-slide{
+  animation-play-state: paused;
+}
+.logos{
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 60px 0;
+  margin: 50px 0;
+  margin-top: 100px;
+  white-space: nowrap;
+  position: relative;
+}
+.logos:before, .logos:after {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 120px;
+  content:'';
+  z-index: 2;
+}
+
+.logos:before{
+  left: 0;
+  background: linear-gradient(to right,whitesmoke,rgb(245,245,245,0%));
+}
+.logos:after{
+  right: 0;
+  background: linear-gradient(to right,rgb(245,245,245,0%),whitesmoke);
+}
+.logos-slide{
+  display: inline-block;
+  animation: 60s slide infinite linear;
+}
+.logos-slide img{
+  height: 80px;
+  margin: 0 30px;
+}
+
+
+
+
+/* --------------experience------------ */
+
+#experience{
+  padding: 80px 0;
+  color: #161A1D;
+}
+
+.experience-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  grid-gap: 3em;
+  margin-top: 80px;
+}
+.experience-list div{
+  border-left:3px solid #BA181B;
+  background-position: 100% 0;
+  overflow: hidden;
+  padding: 30px;
+  font-size: 30px;
+  transition: .5s ease;
+}
+.experience-list div p{
+  color: #161A1D80;
+  font-size: 25px;
+  margin-top: 10px;
+  display: inline-block;
+}
+.experience-list div a{
+  font-size: 20px;
+  margin-top: 20px;
+  display: inline-block;
+}
+.experience-list div:hover{
+  cursor: pointer;
+  background: #BA181B10;
+}
+.moreexperience{
+  display: none;
+}
 
 /* --------------portfolio------------ */
 
 #portfolio{
-  background-color: #D3D3D3;
+  background-color: whitesmoke;
   padding: 80px 0;
   color: #161A1D;
 }
@@ -188,6 +290,10 @@ nav ul li a:hover{
   grid-gap: 3em;
   margin-top: 50px;
 }
+
+
+
+ 
 .work{
   position: relative;
   overflow: hidden;
@@ -271,6 +377,7 @@ nav ul li a:hover{
 
 .btn:hover{
   background-color: #c31c1f;
+  cursor: pointer;
 }
 
 /* ------------contact-------------- */
@@ -319,15 +426,13 @@ form input, form textarea{
   width: 100%;
   border: 0;
   outline: none;
-  background: #c31c1f;
   padding: 15px;
   margin: 10px 0;
-  color: #ffffff;
   font-size: 18px;
   border-radius: 6px;
 }
 input::placeholder,textarea::placeholder {
-  color: #ffffff80
+  color: #00000050
 }
 
 form .btn2{
